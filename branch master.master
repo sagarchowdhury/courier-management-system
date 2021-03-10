@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="branch master.master.cs" Inherits="branch" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 950px;
+        }
+        .style2
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            width: 137px;
+        }
+        .style5
+        {
+            width: 134px;
+        }
+        .style6
+        {}
+        .style7
+        {
+            width: 180px;
+        }
+        .style8
+        {
+            width: 201px;
+        }
+        body
+        {
+            margin:0;
+        }
+        .auto-style1 {
+            text-align: left;
+        }
+        .auto-style2 {
+            width: 122px;
+        }
+        .auto-style3 {
+            width: 51px;
+        }
+    </style>
+</head>
+<body bgcolor="#E3EEF9" style="font-family: Arial, Helvetica, sans-serif">
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="style1" bgcolor="White">
+            <tr>
+                <td>
+                    WELCOME
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click" 
+                        Visible="False" CausesValidation="False">Change Password</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton3" runat="server" onclick="LinkButton3_Click" 
+                        Visible="False" CausesValidation="False">Sign Out</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image ID="Image1" runat="server" ImageAlign="Middle" 
+                        ImageUrl="~/imgs/courierbanner.jpg" Width="950px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table align="center" class="style2">
+                        <tr>
+                            <td align="center" class="style8">
+                                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                                    style="height: 19px">
+                                    <Items>
+                                        <asp:MenuItem Text="Add" Value="Add">
+                                            <asp:MenuItem NavigateUrl="~/Addagents.aspx" Text="Agent" Value="Agent">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Add track Details.aspx" Text="Tracking Details" 
+                                                Value="Tracking Details"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                            <td align="center" class="style8">
+                                <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" 
+                                    style="height: 19px">
+                                    <Items>
+                                        <asp:MenuItem Text="View" Value="View">
+                                            <asp:MenuItem NavigateUrl="~/list of request.aspx" Text="View Pick-up Request" Value="View Pick-up Request">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/viewAssignAgent.aspx" Text="View Delivery Status" 
+                                                Value="View Delivery Status"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/viewBranchComm.aspx" Text="View Commission" 
+                                                Value="View Commission"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                            <td align="center" class="style8">
+                                <asp:Menu ID="Menu3" runat="server" Orientation="Horizontal" 
+                                    style="height: 19px">
+                                    <Items>
+                                        <asp:MenuItem Text="Couriers" Value="Couriers">
+                                            <asp:MenuItem NavigateUrl="~/sentcouriers.aspx" Text="Sent Couriers" Value="Sent Couriers">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/add courier details.aspx" Text="Book Couriers" 
+                                                Value="Book Couriers"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                            <td align="center" class="style8">
+                                <asp:Menu ID="Menu4" runat="server" Orientation="Horizontal" 
+                                    style="height: 19px">
+                                    <Items>
+                                        <asp:MenuItem Text="Agent" Value="Agent">
+                                            <asp:MenuItem NavigateUrl="~/Updateagent.aspx" Text="Update Agent" Value="Update Agent">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/DeleteAgent.aspx" Text="Delete Agent" 
+                                                Value="Delete Agent"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/allotareatoagent.aspx" Text="Allocate area to Agent" 
+                                                Value="Allocate area to Agent"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                            <%--<td align="center" class="auto-style2">
+                                <asp:LinkButton ID="LinkButton6" runat="server" onclick="LinkButton6_Click" CausesValidation="False">Sent 
+                                Couriers</asp:LinkButton>
+                            </td>
+                            <td align="center" class="auto-style2">
+                                <asp:LinkButton ID="LinkButton7" runat="server" onclick="LinkButton7_Click" CausesValidation="False">Book Couriers</asp:LinkButton>
+                            </td>
+                            <td align="center" class="auto-style2">
+                                <asp:LinkButton ID="LinkButton9" runat="server" onclick="LinkButton9_Click" CausesValidation="False">Update Agent</asp:LinkButton>
+                            </td>
+                            <td align="center" class="style8">
+                                <asp:LinkButton ID="LinkButton8" runat="server" onclick="LinkButton8_Click" CausesValidation="False">View 
+                                Pick-up Request</asp:LinkButton>
+                            </td>
+                                <td align="center" class="style8">
+                                <asp:LinkButton ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" CausesValidation="False">View Delivery Status</asp:LinkButton>
+                            </td>
+                            <td align="center" class="style8">
+                                <asp:LinkButton ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" CausesValidation="False">View Commission</asp:LinkButton>
+                            </td>
+                            <td align="center" class="auto-style2">
+                                <asp:LinkButton ID="LinkButton10" runat="server" onclick="LinkButton10_Click" CausesValidation="False">Delete Agent</asp:LinkButton>
+                            </td>
+                            <td align="center" class="auto-style2">
+                                <asp:LinkButton ID="LinkButton13" runat="server" onclick="LinkButton13_Click" CausesValidation="False">Allocate area to Agent</asp:LinkButton>
+                            </td>--%>
+                            
+                            
+                            
+                        </tr>
+                        <tr>
+                            <td align="center" class="style6" colspan="6">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <div class="auto-style1">
+            </div>
+        
+        </asp:ContentPlaceHolder>
+                            </td>
+                            <td align="center" class="style6">
+                                &nbsp;</td>
+                            <td align="center" class="style6">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
